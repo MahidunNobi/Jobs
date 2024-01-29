@@ -2,6 +2,8 @@ import { FaAngleDown, FaAngleRight, FaArrowRight   } from "react-icons/fa";
 import { AiOutlineUsergroupDelete } from "react-icons/ai";
 import Searchbar from "./Searchbar";
 import FirstNestedMenu from "./FirstNestedMenu";
+import SecondNestedMenu from "./SecoundNestedMenu";
+import ThirdNestedMenu from "./ThirdNestedMenu";
 
 const Navbar = () => {
   return (
@@ -21,12 +23,16 @@ const Navbar = () => {
             <li className="flex gap-1 items-center py-3 md:py-5 group cursor-pointer">
              <span> Find Work </span> 
              <FaAngleDown className="group-hover:rotate-180 duration-300" />
+             {/* Nested Menu bar */}
+             <SecondNestedMenu/>
             </li>
             <li className="flex gap-1 items-center py-3 md:py-5 group cursor-pointer">
               <span> Why Us </span>
               <FaAngleDown className="group-hover:rotate-180 duration-300" />
+              {/* Nested Menu bar */}
+              <ThirdNestedMenu />
             </li>
-            <li>
+            <li className=" py-3 md:py-5 cursor-pointer">
               <span> Enterprise </span>
             </li>
           </ul>

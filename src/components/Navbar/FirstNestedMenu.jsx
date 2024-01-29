@@ -6,9 +6,9 @@ import React, {useState} from "react";
 const FirstNestedMenu = () => {
 
     const [hover, setHover] = useState(1)
-console.log(hover)
+
   return (
-    <div className="w-screen hidden group-hover:block absolute top-[60px] left-0 bg-white text-gray-800">
+    <div className="w-screen hidden group-hover:block absolute top-[60px] left-0 bg-white text-gray-800 shadow-md">
                 <div className="container mx-auto py-6 flex justify-between gap-6">
                 {/* Menubar container */}
                 <div className="">
