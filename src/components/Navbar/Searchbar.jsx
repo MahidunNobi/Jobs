@@ -5,7 +5,7 @@ import { IoBriefcaseOutline } from "react-icons/io5";
 
 const Searchbar = () => {
   return (
-    <div className="flex items-center border border-gray-300 hover:bg-gray-200 duration-200 rounded-full">
+    <div className="hidden md:flex items-center border border-gray-300 hover:bg-gray-200 duration-200 rounded-full">
             {/* Search Icon and Input field */}
             <div className="rounded-full flex items-center relative">
               <FaSearch className="text-xl text-gray-500 absolute left-2" />
