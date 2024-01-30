@@ -1,18 +1,19 @@
-import { FaAngleDown, FaAngleUp, FaSearch  } from "react-icons/fa";
+import { FaAngleDown  } from "react-icons/fa";
 import { AiOutlineUsergroupDelete } from "react-icons/ai";
 import { HiOutlineClipboardDocumentCheck } from "react-icons/hi2";
 import { IoBriefcaseOutline } from "react-icons/io5";
+import { CiSearch } from "react-icons/ci";
 
 const Searchbar = () => {
   return (
     <div className="hidden md:flex items-center border border-gray-300 hover:bg-gray-200 duration-200 rounded-full">
             {/* Search Icon and Input field */}
             <div className="rounded-full flex items-center relative">
-              <FaSearch className="text-xl text-gray-500 absolute left-2" />
+              <CiSearch className="text-2xl text-gray-500 absolute left-2" />
               <input 
               type="text" 
               placeholder="Search" 
-              className="outline-none bg-transparent py-1 pl-9 hover:bg-white duration-100 rounded-full border-2 border-transparent focus:border-gray-400 "
+              className="outline-none bg-transparent w-[200px] xl:w-auto py-1 pl-9 hover:bg-white duration-100 rounded-full border-2 border-transparent focus:border-gray-400 "
               />
             </div>
             {/* Select options section */}

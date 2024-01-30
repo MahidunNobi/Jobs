@@ -43,7 +43,7 @@ const Navbar = () => {
           {/* Input field */}          
           <Searchbar />
           <button className="hover:text-grn duration-300"> Login</button>
-          <button className="border-2 border-grn rounded-full py-1 px-3 text-grn hover:bg-grn hover:text-white duration-300"> Sign Up</button>
+          <button className="border-2 border-grn rounded-full py-1 px-3 text-grn hover:bg-grn hover:text-white duration-300 hidden md:inline-block"> Sign Up</button>
           <MobileSearchbar />
         </div>
       </div>
