@@ -1,5 +1,5 @@
 "use client"
-import { FaAngleRight } from "react-icons/fa";
+import { FaAngleRight, FaArrowRight } from "react-icons/fa";
 import React, {useState} from "react";
 import Description from "./Description";
 
@@ -55,13 +55,20 @@ const FirstNestedMenu = ({FindAJob, BrowseAndBuy, GetAdvice}) => {
                 <div className="flex-1 relative">
                   {/* First menu Description container */}
                   <div style={{display: hover == 1 ? "flex" : "none"}} className=" gap-6 before:w-[60px] before:bg-grn before:rounded-full before:absolute before:h-[4px] before:-top-1 before:left-6 p-6 " >
-                    <Description 
-                    width={""}
-                    title={"Talent Marketplace"} 
-                    sup={"TM"} 
-                    text={"Learn about working with talent or explore your specific hiring needs."} 
-                    linkText={"Hire on Talent Marketplace"}
-                    />
+                    {/* Description */}
+                    <div>
+                      <h5 className=" font-medium"> Talent Marketplace <sup> TM </sup> </h5>
+                      <p className="text-sm my-2">
+                        Learn about working with talent or explore your specific hiring needs.
+                      </p>
+                      <a
+                        href=""
+                        className="text-grn flex justify-between items-center text-sm max-w-[220px] underline hover:no-underline"
+                      >
+                        <span className="font-bold"> Hire on Talent Marketplace </span>
+                        <FaArrowRight />
+                      </a>
+                    </div>
 
                     {/* Links */}
                     <div className=" min-w-[300px] py-6 flex flex-col fap-1">
@@ -77,7 +84,7 @@ const FirstNestedMenu = ({FindAJob, BrowseAndBuy, GetAdvice}) => {
 
                     {/* Description */}                    
                     <Description 
-                    width={"220px"}
+                    width={"180px"}
                     title={"Project Catalog"} 
                     sup={"TM"} 
                     text={"Browse and buy projects that have a clear scope and price."} 

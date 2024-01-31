@@ -3,7 +3,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const Description = ({width, title, sup, text, linkText}) => {
   return (
-    <div className={`w-[${width}]`}>
+    <div className={`w-[220px]`}>
       <h5 className=" font-medium"> {title} <sup> {sup} </sup> </h5>
       <p className="text-sm my-2">
         {text}
