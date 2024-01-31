@@ -1,21 +1,29 @@
 "use client";
 import React, { useState } from "react";
 import { RiMenu2Fill } from "react-icons/ri";
-import { FaAngleLeft, FaAngleDown, FaAngleRight } from "react-icons/fa";
+import {
+  FaAngleLeft,
+  FaAngleDown,
+  FaAngleRight,
+  FaArrowLeft,
+} from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 
 const MobileNav = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(true);
   const [showTalent, setshowTalent] = useState(false);
   const [showWork, setshowWork] = useState(false);
   const [showWhyUs, setshowWhyUs] = useState(false);
 
+  const [showPostaJob, setshowPostaJob] = useState(false);
 
-  const collapseAllMenu= ()=>{
-    setShowMenu(false)
-    setshowTalent(false)
-    setshowWork(false)
-    setshowWhyUs(false)
-  }
+  const collapseAllMenu = () => {
+    setShowMenu(false);
+    setshowTalent(false);
+    setshowWork(false);
+    setshowWhyUs(false);
+    setshowPostaJob(false)
+  };
 
   return (
     <div className="lg:hidden">
@@ -30,6 +38,7 @@ const MobileNav = () => {
         <button className="p-4" onClick={collapseAllMenu}>
           <FaAngleLeft className="text-lg" />
         </button>
+
         {/* Menu Container  */}
         <ul className="">
           {/* Find Talent */}
@@ -53,13 +62,15 @@ const MobileNav = () => {
               className="overflow-hidden duration-200 pl-3"
             >
               <li>
-                <div className=" flex items-center justify-between px-3 py-2">
+                <button
+                onClick={()=> setshowPostaJob(true)} 
+                className="w-full text-left flex items-center justify-between px-3 py-2">
                   <div className=" ">
                     <p>Post a job and hire a pro</p>
                     <span className="text-grn text-sm">Talent marketplace</span>
                   </div>
                   <FaAngleRight className="" />
-                </div>
+                </button>
               </li>
 
               <li>
@@ -110,7 +121,7 @@ const MobileNav = () => {
                       {" "}
                       Learn why we have the right oportunity for you{" "}
                     </p>
-                  </div>                  
+                  </div>
                 </div>
               </li>
 
@@ -123,7 +134,7 @@ const MobileNav = () => {
                     <p className="text-sm leading-tight">
                       Explore the kind of work available in your field{" "}
                     </p>
-                  </div>                  
+                  </div>
                 </div>
               </li>
 
@@ -135,7 +146,7 @@ const MobileNav = () => {
                       {" "}
                       Get noticed by the right client{" "}
                     </p>
-                  </div>                  
+                  </div>
                 </div>
               </li>
             </ul>
@@ -174,30 +185,96 @@ const MobileNav = () => {
                 <h5 className="font-medium "> How to hire </h5>
               </li>
               <li className="px-6 py-2 rounded-lg hover:bg-grn/10 border border-gray-300">
-                    <span className="text-xs mb-2"> Guids</span>
-                    <p className="">Getting started as a freelancer</p>
-                </li>
-                <li className="px-6 py-2 my-3 rounded-lg hover:bg-grn/10 border border-gray-300">
-                    <span className="text-xs mb-2"> Guids</span>
-                    <p className="">Growing your freelance career</p>
-                </li>
-                <li className="px-6 py-2 rounded-lg hover:bg-grn/10 border border-gray-300">
-                    <span className="text-xs mb-2"> Guids</span>
-                    <p className="">Hiring & Working with indepent talent</p>
-                </li>
-                <a href="" className="text-grn flex justify-between items-center text-sm max-w-[160px] underline hover:no-underline my-3">
-                <span className="font-bold">  See Resources </span>                
+                <span className="text-xs mb-2"> Guids</span>
+                <p className="">Getting started as a freelancer</p>
+              </li>
+              <li className="px-6 py-2 my-3 rounded-lg hover:bg-grn/10 border border-gray-300">
+                <span className="text-xs mb-2"> Guids</span>
+                <p className="">Growing your freelance career</p>
+              </li>
+              <li className="px-6 py-2 rounded-lg hover:bg-grn/10 border border-gray-300">
+                <span className="text-xs mb-2"> Guids</span>
+                <p className="">Hiring & Working with indepent talent</p>
+              </li>
+              <a
+                href=""
+                className="text-grn flex justify-between items-center text-sm max-w-[160px] underline hover:no-underline my-3"
+              >
+                <span className="font-bold"> See Resources </span>
               </a>
             </ul>
           </li>
 
           <li>
-          <button className="px-3 py-6 text-left cursor-pointer w-full">
-              <span> Enterprise </span> 
-                           
+            <button className="px-3 py-6 text-left cursor-pointer w-full">
+              <span> Enterprise </span>
             </button>
           </li>
         </ul>
+
+        {/* Post a job and hire a pro nested Menu */}
+        <div
+        style={{ transform: showPostaJob ? "translateX(0)" : "translateX(-100%)" }}
+        className="absolute top-0 left-0 origin-left bg-white min-w-screen h-screen duration-300">
+          {/* Action Buttons */}
+          <div className="flex justify-between p-4 border-b border-gray-300">
+            <div className="flex justify-center gap-3">
+              <button onClick={()=> setshowPostaJob(false)}>
+                <FaArrowLeft className="text-lg" />
+              </button>
+              <span className="">
+                {" "}
+                Talent Marketplace <sup>TM </sup>{" "}
+              </span>
+            </div>
+            <button className="" onClick={collapseAllMenu}>
+              <IoMdClose className="text-2xl" />
+            </button>
+          </div>
+          {/* Description */}
+                      
+            <p className="text-sm my-2 p-4">
+              Learn about working with talent or explore your specific hiring
+              needs. &nbsp;
+              <a href="" className="text-grn inline-flex justify-between items-center text-sm font-bold max-w-[220px] underline hover:no-underline" >
+                 Hire on Talent Marketplace               
+              </a>
+            </p>
+          
+          {/* Options */}
+          <ul className="p-4">
+            <li className="py-5">
+                <h5 className="font-medium "> Development & IT </h5>
+              </li>
+              <li className="py-5">
+                <h5 className="font-medium "> Design & Creative </h5>
+              </li>
+              <li className="py-5">
+                <h5 className="font-medium "> Sales & Marketing </h5>
+              </li>
+              <li className="py-5">
+                <h5 className="font-medium "> Writing & Translation </h5>
+              </li>              
+              <li className="py-5">
+                <h5 className="font-medium "> Admin & Customers Support </h5>
+              </li>              
+              <li className="py-5">
+                <h5 className="font-medium "> Finance & Accouting </h5>
+              </li>              
+              <li className="py-5">
+                <h5 className="font-medium "> HR & Training </h5>
+              </li>              
+              <li className="py-5">
+                <h5 className="font-medium "> Legal </h5>
+              </li>              
+              <li className="py-5">
+                <h5 className="font-medium "> Engineering & Architecture </h5>
+              </li>              
+              <li className="py-5">
+                <h5 className="font-medium "> Hire freelancers </h5>
+              </li>              
+          </ul>
+        </div>
       </div>
     </div>
   );
