@@ -4,7 +4,7 @@ import { FaAngleLeft } from "react-icons/fa";
 import { CiSearch } from "react-icons/ci";
 
 const MobileSearch = () => {
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const [option, setOption] = useState("talent");
 
   function handleSelectedStyle(value) {
@@ -16,15 +16,15 @@ const MobileSearch = () => {
       return SelectedNavStyle;
     }
   }
-console.log(showMobileMenu)
+
   return (
     <div className="md:hidden" >
-      <button className="icon block" onClick={()=> setShowMobileMenu(true)}>
+      <button className="icon block" onClick={()=> setShowSearch(true)}>
         <CiSearch className="text-2xl" />
       </button>
-      <div style={{transform: showMobileMenu ? "scaleX(1)": "scaleX(0)"}} className="absolute top-0 left-0 origin-right bg-white w-screen h-screen p-4 duration-300">
+      <div style={{transform: showSearch ? "scaleX(1)": "scaleX(0)"}} className="absolute top-0 left-0 origin-right bg-white w-screen h-screen p-4 duration-300">
         {/* Back Button */}
-        <button className="mb-3" onClick={()=>setShowMobileMenu(false)}>
+        <button className="mb-3" onClick={()=>setShowSearch(false)}>
           <FaAngleLeft className="text-lg" />
         </button>
         {/* Search bar */}
