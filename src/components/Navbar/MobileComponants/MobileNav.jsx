@@ -114,7 +114,7 @@ const MobileNav = () => {
       {/* Menus with first label nested menus */}
       <div
         style={{ transform: showMenu ? "scaleX(1)" : "scaleX(0)" }}
-        className="absolute top-0 left-0 origin-left bg-white w-screen h-screen  duration-300"
+        className="absolute top-0 left-0 origin-left bg-white w-screen min-h-screen  duration-300"
       >
         {/* Back Button */}
         <button className="p-4" onClick={collapseAllMenu}>
@@ -196,7 +196,7 @@ const MobileNav = () => {
           style={{
             transform: showPostaJob ? "translateX(0)" : "translateX(-100%)",
           }}
-          className="absolute top-0 left-0 origin-left bg-white min-w-screen h-screen duration-300"
+          className="absolute top-0 left-0 origin-left bg-white w-screen min-h-screen duration-300"
         >
           <ActionButtons
             setshow={setshowPostaJob}
