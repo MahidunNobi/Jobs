@@ -1,9 +1,11 @@
 import Hero from "@/components/HomeBeforeLogin/Hero";
+import HowItWorks from "@/components/HomeBeforeLogin/HowItWorks";
 
 export default function Home(){
     return (
-        <h1 className="">
-            <Hero />            
-        </h1>
+        <main className="">
+            <Hero />    
+            <HowItWorks />
+        </main>
     )
 }
