@@ -68,11 +68,11 @@ const HowItWorks = () => {
             <li>
               <Button
                 text={"Sign up for free"}
-                aditionalClass={"hidden lg:inline-block lg:mr-2"}
+                aditionalClass={"hidden md:inline-block md:mr-2"}
               />
               <ButtonBordered
                 text={"Learn how to hire"}
-                aditionalClass={"w-full lg:w-auto"}
+                aditionalClass={"w-full md:w-auto"}
               />
             </li>
           </ul>
