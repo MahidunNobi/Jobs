@@ -6,7 +6,7 @@ import Button from "../Button";
 import ButtonBordered from "../ButtonBordered";
 const HowItWorks = () => {
   return (
-    <section className="py-16">
+    <section className="py-3 lg:py-16">
       <div className="container mx-auto px-3 lg:flex lg:gap-3 lg:items-center lg:justify-between">
         {/* left container */}
         <div className="lg:w-[40%] overflow-hidden">
@@ -70,7 +70,10 @@ const HowItWorks = () => {
                 text={"Sign up for free"}
                 aditionalClass={"hidden lg:inline-block lg:mr-2"}
               />
-              <ButtonBordered text={"Learn how to hire"} aditionalClass={""} />
+              <ButtonBordered
+                text={"Learn how to hire"}
+                aditionalClass={"w-full lg:w-auto"}
+              />
             </li>
           </ul>
         </div>
