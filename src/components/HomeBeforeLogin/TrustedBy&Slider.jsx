@@ -4,7 +4,7 @@ const TrustedBy = () => {
   return (
     <section className="py-6 lg:py-16">
       <div className="container mx-auto px-3 ">
-        <h1 className="text-4xl lg:text-6xl font-semibold max-w-[500px]">
+        <h1 className="text-4xl lg:text-6xl font-semibold max-w-[600px] tracking-tight">
           Trusted by leading brands and startups
         </h1>
         {/* Slider */}
