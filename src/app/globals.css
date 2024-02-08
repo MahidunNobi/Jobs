@@ -2,19 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*{
-    background-color: transparent;
+* {
+  background-color: transparent;
 }
 
-@layer base{
-    h5{
-        line-height: 16px;
-    }
+@layer base {
+  h5 {
+    line-height: 16px;
+  }
 }
-@layer componants{
-    
+@layer componants {
 }
-@layer utilities{
-    
+@layer utilities {
+}
+.noScrollBar::-webkit-scrollbar {
+  display: none;
 }
