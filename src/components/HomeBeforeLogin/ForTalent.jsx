@@ -44,9 +44,7 @@ const ForTalent = () => {
               </ul>
               <Button
                 text={"Find Opportunities"}
-                aditionalClass={
-                  "bg-white text-blue hover:bg-gray-200 hover:text-blue "
-                }
+                aditionalClass={"bg-white text-black hover:bg-gray-200 "}
               />
             </div>
           </div>
