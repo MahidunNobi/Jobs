@@ -9,6 +9,7 @@ import TrustedBySlider from "@/components/HomeBeforeLogin/TrustedBy&Slider";
 import WhyBusiness from "@/components/HomeBeforeLogin/WhyBusiness";
 
 export default function Home(){
+    
     return (
         <main className="">
             <Hero />    

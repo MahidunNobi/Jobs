@@ -1,16 +1,12 @@
-"use client";
-import React, { useState } from "react";
+import { useState } from "react";
+import { FaAngleDown, FaAngleLeft } from "react-icons/fa";
 import { RiMenu2Fill } from "react-icons/ri";
-import {
-  FaAngleLeft,
-  FaAngleDown,
-} from "react-icons/fa";
-import ImageText from "./ImageText";
-import FindTalentNestedMenu from "./FindTalentNestedMenu";
-import FindWordNestedMenu from "./FindWordNestedMenu";
-import WhyUsNestedMenu from "./WhyUsNestedMenu";
 import ActionButtons from "./ActionButtons";
 import Description from "./Description";
+import FindTalentNestedMenu from "./FindTalentNestedMenu";
+import FindWordNestedMenu from "./FindWordNestedMenu";
+import ImageText from "./ImageText";
+import WhyUsNestedMenu from "./WhyUsNestedMenu";
 
 const MobileNav = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -252,7 +248,7 @@ const MobileNav = () => {
             transform: showGetAdvice ? "translateX(0)" : "translateX(-100%)",
           }}
           className="absolute top-0 left-0 origin-left bg-white w-screen min-h-screen duration-300"
-        >          
+        >
           <ActionButtons
             setshow={setshowGetAdvice}
             title={"Consultations"}
@@ -260,9 +256,11 @@ const MobileNav = () => {
             collapseAllMenu={collapseAllMenu}
           />
           <Description
-            text={"Explore what is possible with an industry expert. See their availability and book a time that works for you."}
+            text={
+              "Explore what is possible with an industry expert. See their availability and book a time that works for you."
+            }
             linkText={"Explore all categories"}
-          />       
+          />
           {/* Options */}
           <ul className="p-4 space-y-4">
             {GetAdvice.map((ele, i) => (
@@ -271,7 +269,6 @@ const MobileNav = () => {
           </ul>
         </div>
       </div>
-
     </div>
   );
 };
