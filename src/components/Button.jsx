@@ -5,8 +5,7 @@ const Button = ({ text, aditionalClass }) => {
         aditionalClass === "" ? "hover:bg-grn/85" : aditionalClass
       }`}
     >
-      {" "}
-      {text}{" "}
+      {text}
     </button>
   );
 };

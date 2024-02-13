@@ -10,9 +10,12 @@ const DextopRightSection = () => {
       <Link href={"/login"} className="hover:text-grn duration-300">
         Login
       </Link>
-      <button className="border-2 border-grn rounded-full py-1 px-3 text-grn hover:bg-grn hover:text-white duration-300 hidden md:inline-block">
+      <Link
+        href={"/signup"}
+        className="border-2 border-grn rounded-full py-1 px-3 text-grn hover:bg-grn hover:text-white duration-300 hidden md:inline-block"
+      >
         Sign Up
-      </button>
+      </Link>
       <MobileSearchbar />
     </div>
   );

@@ -7,7 +7,7 @@ import MobileNav from "./MobileComponants/MobileNav";
 
 const Navbar = () => {
   const path = usePathname();
-  if (path === "/login") {
+  if (path === "/login" || path === "/signup") {
     return (
       <nav className="border-b border-gray-300 sticky top-0 bg-white z-10">
         <div className="container mx-auto px-3 flex justify-between items-center">
