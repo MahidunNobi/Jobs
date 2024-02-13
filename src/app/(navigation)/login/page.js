@@ -7,7 +7,7 @@ const page = () => {
   return (
     <main>
       <div className="container mx-auto px-3 min-h-screen flex flex-col justify-center items-center">
-        <div className="border border-gray-300 rounded-xl px-6 md:px-16 py-4 md:py-6 space-y-6 md:mt-6">
+        <div className="border border-gray-300 rounded-xl px-6 md:px-16 py-4 md:py-6 space-y-6 mt-6">
           <h2 className="md:min-w-[350px] text-2xl text-center font-semibold">
             Log in to Jobs
           </h2>

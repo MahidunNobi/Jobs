@@ -9,7 +9,7 @@ const Page = () => {
   return (
     <main className="container mx-auto px-3">
       {/* First Stage */}
-      <div className="my-8 flex flex-col space-y-10 items-center">
+      <div className="py-8 flex flex-col space-y-10 items-center">
         <h1 className="text-center text-4xl font-medium">
           Join as a client or freelancer
         </h1>
